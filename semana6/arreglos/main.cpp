@@ -8,9 +8,17 @@ using namespace std;
 */
 long sumar(int arr[], int tam) {
     int sum = 0;
-    for(int i = 0; i < tam; i++)
-        sum = sum + arr[i];
+    for(int i = 0; i < tam; sum += arr[i++])
+        ;
     return sum;
+}
+
+long sumarR(int arr[], int tam) {
+    if(tam == 0) {
+        return 0;
+    } else {
+        return arr[tam-1] + sumarR(arr, tam-1);
+    }
 }
 
 int main()
@@ -29,6 +37,7 @@ int main()
     cout << arr[3] << endl;
     cout << arr[4] << endl;
     cout << "la suma es: " << sumar(arr, 5) << endl;
+    cout << "la sumaR es: " << sumarR(arr, 5) << endl;
 
     return 0;
 }
