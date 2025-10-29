@@ -33,6 +33,11 @@ void bubblesort(int *ptr, int tam) {
         }
     }
 }
+/**
+* Insertionsort
+* Mergesort
+* Quicksort
+*/
 
 int main()
 {
