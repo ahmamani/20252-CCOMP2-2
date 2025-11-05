@@ -5,8 +5,14 @@
 class MyString
 {
     public:
-        MyString(char *data, int size);
-        virtual ~MyString();
+        MyString(char *data);
+        int getSize() const;
+        char* getData() const;
+
+        void toUpper();
+        void toLower();
+
+        ~MyString();
 
     private:
         int size;
