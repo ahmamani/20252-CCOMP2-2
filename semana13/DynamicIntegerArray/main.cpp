@@ -18,5 +18,9 @@ int main()
     dia2.push_back(10);
     dia2.print();
     cout << endl;
+
+    dia2.insert(100, 3);
+    dia2.print();
+    cout << endl;
     return 0;
 }
