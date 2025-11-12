@@ -36,7 +36,40 @@ void DynamicIntegerArray::push_back(int val) {
     this->data = tmp;
 }
 
+void DynamicIntegerArray::insert(int val, int pos) {
+    int *tmp = new int[size+1];
+    for(int i = 0; i < pos; i++) {
+        tmp[i] = this->data[i];
+    }
+    for(int i = pos; i < size; i++) {
+        tmp[i+1] = this->data[i];
+    }
+    tmp[pos] = val;
+    size++;
+    delete[] data;
+    this->data = tmp;
+}
+
+void remove(int pos) {
+    int *tmp = new int[size-1];
+    for(int i = 0; i < pos; i++) {
+        tmp[i] = this->data[i];
+    }
+    for(int i = pos; i < size; i++) {
+        tmp[i] = this->data[i+1];
+    }
+}
+
 DynamicIntegerArray::~DynamicIntegerArray()
 {
     delete[] data;
 }
+
+
+
+
+
+
+
+
+

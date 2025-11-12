@@ -13,6 +13,8 @@ class DynamicIntegerArray
         void print() const;
 
         void push_back(int val);
+        void insert(int val, int pos);
+        void remove(int pos);
 
         ~DynamicIntegerArray();
 
