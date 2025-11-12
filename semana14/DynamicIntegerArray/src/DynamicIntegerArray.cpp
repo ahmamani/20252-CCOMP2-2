@@ -14,6 +14,14 @@ DynamicIntegerArray::DynamicIntegerArray(int arr[], int size)
         this->data[i] = arr[i];
 }
 
+// Constructor copia
+DynamicIntegerArray::DynamicIntegerArray(DynamicIntegerArray &o){
+    this->size = o.size;
+    this->data = new int[size];
+    for(int i = 0; i < size; i++)
+        this->data[i] = o.data[i];
+}
+
 int DynamicIntegerArray::getSize() const {
     return size;
 }

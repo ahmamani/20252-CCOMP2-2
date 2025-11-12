@@ -22,5 +22,9 @@ int main()
     dia2.insert(100, 3);
     dia2.print();
     cout << endl;
+
+    dia2.remove(1);
+    dia2.print();
+    cout << endl;
     return 0;
 }
